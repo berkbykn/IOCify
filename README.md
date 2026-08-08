@@ -2,9 +2,6 @@
 IOC enrichment &amp; threat intelligence pipeline for modern SOC
 
 # Idea
-
-REST APIs, an XSOAR playbook integration, and a React-based SOC investigation console.
-
                   ┌──────────────────────────────────────────────────────────┐
                   │                      Ingestion                           │
                   │  (SIEM Alerts / React UI / API / XSOAR Playbook Trigger) │
@@ -35,9 +32,9 @@ REST APIs, an XSOAR playbook integration, and a React-based SOC investigation co
                   │       • Threat Actor & Campaign Attributions             │
                   └─────────────────────────────┬────────────────────────────┘
                                                 │
-                   ┌────────────────────────────┴────────────────────────────┐
+                   ┌────────────────────────────┼────────────────────────────┐
                    ▼                                                         ▼
-  ┌─────────────────────────────────┐                       ┌─────────────────────────────────┐
-  │   React + TypeScript Dashboard  │                       │   Cortex XSOAR Content Pack     │
-  │  (Graph View & Pivot Console)   │                       │  (Auto-Triage & Containment)    │
-  └─────────────────────────────────┘                       └─────────────────────────────────┘
+            ┌──────────────────────────────────┐          ┌──────────────────────────────────┐
+            |    React + TypeScript Dashboard  |          |    Cortex XSOAR Content Pack     |
+            |    (Graph View & Pivot Console)  |          |    (Auto-Triage & Containment)   |
+            └──────────────────────────────────┘          └──────────────────────────────────┘
