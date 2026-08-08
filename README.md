@@ -51,11 +51,11 @@ Investigation console	React + TypeScript	Analyst-facing UI for searching indicat
 
 This maps directly onto the stack requested for the project:
 
-✅ Primary scripting — Python: all enrichment, parsing, and TI/SIEM integration logic lives in backend/app/.
-✅ API automation — Python httpx: backend/app/utils/http_client.py is the shared async client (retry, backoff, concurrency limiting) used by every provider adapter.
-✅ Automation/orchestration — Cortex XSOAR + Python: xsoar/IOCScopePack/ contains the integration (IOCScope.py/.yml) and an enrichment→triage playbook.
-✅ Backend UI — FastAPI: backend/app/main.py exposes the enrichment engine as a documented REST API (/docs, /redoc).
-✅ SOC dashboard — React + TypeScript: frontend/ is the investigation console that calls the FastAPI backend and renders composite scores, artifacts, and provider-level detail.
+- ✅ Primary scripting — Python: all enrichment, parsing, and TI/SIEM integration logic lives in backend/app/.
+- ✅ API automation — Python httpx: backend/app/utils/http_client.py is the shared async client (retry, backoff, concurrency limiting) used by every provider adapter.
+- ✅ Automation/orchestration — Cortex XSOAR + Python: xsoar/IOCScopePack/ contains the integration (IOCScope.py/.yml) and an enrichment→triage playbook.
+- ✅ Backend UI — FastAPI: backend/app/main.py exposes the enrichment engine as a documented REST API (/docs, /redoc).
+- ✅ SOC dashboard — React + TypeScript: frontend/ is the investigation console that calls the FastAPI backend and renders composite scores, artifacts, and provider-level detail.
 
 # 4. Indicator coverage & data sources
 | Indicator Type | Providers Queried             | What's Extracted                                                                     |
