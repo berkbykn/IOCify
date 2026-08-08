@@ -58,11 +58,11 @@ This maps directly onto the stack requested for the project:
 - ✅ SOC dashboard — React + TypeScript: frontend/ is the investigation console that calls the FastAPI backend and renders composite scores, artifacts, and provider-level detail.
 
 # 4. Indicator coverage & data sources
-| Indicator Type | Providers Queried             | What's Extracted                                                                     |
-|----------------|-------------------------------|--------------------------------------------------------------------------------------|
-| 1              | IPv4 / IPv6                   | AbuseIPDB, Shodan, RDAP, VirusTotal, Trend Micro ERS, BlacklistMaster                |
-| 2              | File Hashes (MD5/SHA1/SHA256) | VirusTotal, ANY.RUN, Hybrid Analysis, MalwareBazaar                                  |
-| 3              | Domains / URLs                | RDAP/WHOIS, VirusTotal, AlienVault OTX, URLScan.io, Trend Micro ERS, BlacklistMaster |
-| 4              | Emails                        | EmailRep.io, Have I Been Pwned                                                       |
+| Indicator Type | Providers Queried             | 
+|----------------|-------------------------------|
+| IPv4 / IPv6    | AbuseIPDB, Shodan, RDAP, VirusTotal, Trend Micro ERS, BlacklistMaster |
+| File Hashes (MD5/SHA1/SHA256) | VirusTotal, ANY.RUN, Hybrid Analysis, MalwareBazaar |
+| Domains / URLs | RDAP/WHOIS, VirusTotal, AlienVault OTX, URLScan.io, Trend Micro ERS, BlacklistMaster |
+| Emails | EmailRep.io, Have I Been Pwned |
 
-Every provider adapter degrades gracefully: a missing API key or a timeout produces 'ok: false' on that one source rather than failing the whole enrichment.
+Every provider adapter degrades gracefully, a missing API key or a timeout produces 'ok: false' on that one source rather than failing the whole enrichment.
